@@ -22,9 +22,7 @@ class SSConstructionCinematicApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         scaffoldBackgroundColor: Colors.black,
-        textTheme: GoogleFonts.poppinsTextTheme().apply(
-          bodyColor: Colors.white,
-        ),
+
         primaryColor: const Color(0xFFFAAB0C),
       ),
       home: const LandingScreen(),
