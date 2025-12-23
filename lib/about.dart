@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
-import 'package:model_viewer_plus/model_viewer_plus.dart';
+// import 'package:model_viewer_plus/model_viewer_plus.dart';
 import 'package:confetti/confetti.dart';
 
 class AboutSection extends StatefulWidget {
@@ -256,7 +256,7 @@ class _AboutSectionState extends State<AboutSection>
           flex: 5,
           child: Column(
             children: [
-              _build3DModel(),
+              // _build3DModel(),
               SizedBox(height: 32),
               _buildOwnerCards(false),
             ],
@@ -282,7 +282,7 @@ class _AboutSectionState extends State<AboutSection>
   Widget _buildTabletLayout() {
     return Column(
       children: [
-        _build3DModel(),
+        // _build3DModel(),
         SizedBox(height: 32),
         _buildOwnerCards(false),
         SizedBox(height: 32),
@@ -297,7 +297,7 @@ class _AboutSectionState extends State<AboutSection>
   Widget _buildMobileLayout() {
     return Column(
       children: [
-        _build3DModel(),
+        // _build3DModel(),
         SizedBox(height: 24),
         _buildOwnerCards(true),
         SizedBox(height: 24),
@@ -327,67 +327,67 @@ class _AboutSectionState extends State<AboutSection>
           ),
         ],
       ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: Stack(
-          children: [
-            if (_show3DModel)
-              ModelViewer(
-                src: 'assets/images/abhi.glb',
-                alt: "3D Construction Model",
-                ar: false,
-                autoRotate: true,
-                cameraControls: true,
-                disableZoom: true,
-                backgroundColor: Colors.transparent,
-                cameraOrbit: "45deg 75deg 3m",
-                fieldOfView: "35deg",
-                loading: Loading.lazy,
-              ),
-            if (!_show3DModel)
-              Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CircularProgressIndicator(color: Color(0xFFFAAB0C)),
-                    SizedBox(height: 16),
-                    Text(
-                      'Loading 3D Model...',
-                      style: TextStyle(color: Colors.white70, fontSize: 12),
-                    ),
-                  ],
-                ),
-              ),
-            if (_show3DModel)
-              Positioned(
-                bottom: 16,
-                right: 16,
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                  decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.6),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(
-                        Icons.threed_rotation,
-                        color: Colors.white,
-                        size: 14,
-                      ),
-                      SizedBox(width: 6),
-                      Text(
-                        'Interactive 3D',
-                        style: TextStyle(color: Colors.white, fontSize: 11),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-          ],
-        ),
-      ),
+      // child: ClipRRect(
+      //   borderRadius: BorderRadius.circular(20),
+      //   child: Stack(
+      //     children: [
+      //       if (_show3DModel)
+      //         ModelViewer(
+      //           src: 'images/abhi.glb',
+      //           alt: "3D Construction Model",
+      //           ar: false,
+      //           autoRotate: true,
+      //           cameraControls: true,
+      //           disableZoom: true,
+      //           backgroundColor: Colors.transparent,
+      //           cameraOrbit: "45deg 75deg 3m",
+      //           fieldOfView: "35deg",
+      //           loading: Loading.lazy,
+      //         ),
+      //       if (!_show3DModel)
+      //         Center(
+      //           child: Column(
+      //             mainAxisAlignment: MainAxisAlignment.center,
+      //             children: [
+      //               CircularProgressIndicator(color: Color(0xFFFAAB0C)),
+      //               SizedBox(height: 16),
+      //               Text(
+      //                 'Loading 3D Model...',
+      //                 style: TextStyle(color: Colors.white70, fontSize: 12),
+      //               ),
+      //             ],
+      //           ),
+      //         ),
+      //       if (_show3DModel)
+      //         Positioned(
+      //           bottom: 16,
+      //           right: 16,
+      //           child: Container(
+      //             padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      //             decoration: BoxDecoration(
+      //               color: Colors.black.withOpacity(0.6),
+      //               borderRadius: BorderRadius.circular(16),
+      //             ),
+      //             child: Row(
+      //               mainAxisSize: MainAxisSize.min,
+      //               children: [
+      //                 Icon(
+      //                   Icons.threed_rotation,
+      //                   color: Colors.white,
+      //                   size: 14,
+      //                 ),
+      //                 SizedBox(width: 6),
+      //                 Text(
+      //                   'Interactive 3D',
+      //                   style: TextStyle(color: Colors.white, fontSize: 11),
+      //                 ),
+      //               ],
+      //             ),
+      //           ),
+      //         ),
+      //     ],
+      //   ),
+      // ),
     );
   }
 
