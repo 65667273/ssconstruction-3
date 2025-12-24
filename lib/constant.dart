@@ -18,6 +18,7 @@ class SectionTitle extends StatelessWidget {
     );
   }
 }
+//
 
 class AnimatedRevealWidget extends StatelessWidget {
   final Widget child;
